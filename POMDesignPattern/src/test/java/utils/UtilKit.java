@@ -20,7 +20,7 @@ public class UtilKit extends BasePage{
 		ArrayList<Row> testCaseRows=getTestCaseRows(wS,testCase);
 		HashMap<String, String> hMaping=new HashMap<String, String>();
 		for(int i=0;i<testCaseRows.size();i++) {
-			for(int j=1;j<testCaseRows.get(0).getPhysicalNumberOfCells();i++) {
+			for(int j=1;j<testCaseRows.get(0).getPhysicalNumberOfCells();j++) {
 				hMaping.put(testCaseRows.get(0).getCell(j).getStringCellValue(),testCaseRows.get(1).getCell(j).getStringCellValue());
 			}
 		}
