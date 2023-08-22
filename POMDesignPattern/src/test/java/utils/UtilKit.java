@@ -18,13 +18,13 @@ public class UtilKit extends BasePage{
 		XSSFWorkbook wB=new XSSFWorkbook(fIS2);
 		XSSFSheet wS=wB.getSheet("Sheet1");
 		ArrayList<Row> testCaseRows=getTestCaseRows(wS,testCase);
-		HashMap<String, String> hMap=new HashMap<String, String>();
+		HashMap<String, String> hMaping=new HashMap<String, String>();
 		for(int i=0;i<testCaseRows.size();i++) {
 			for(int j=1;j<testCaseRows.get(0).getPhysicalNumberOfCells();i++) {
-				hMap.put(testCaseRows.get(0).getCell(j).getStringCellValue(),testCaseRows.get(1).getCell(j).getStringCellValue());
+				hMaping.put(testCaseRows.get(0).getCell(j).getStringCellValue(),testCaseRows.get(1).getCell(j).getStringCellValue());
 			}
 		}
-		return hMap;
+		return hMaping;
 		
 	}
 
